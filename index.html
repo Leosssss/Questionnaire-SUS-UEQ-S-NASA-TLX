@@ -2,7 +2,7 @@
 <link rel="stylesheet" href="./bootstrap/css/bootstrap.css">
 <script type="text/javascript" src="./bootstrap/js/bootstrap.js"></script>
 <link rel="stylesheet" href="./custom/customStyle.css">
-<script type="text/javascript" src="./custom/custom.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 <html>
 <body class="p-3 m-0 border-0 bd-example">
 
@@ -18,7 +18,7 @@
                 <div class="form row">
                     <div class="input-group mb-3">
                         <span class="input-group-text">Bitte hier die Aufgabe ID eingeben</span>
-                        <input type="text" placeholder="z.B. : 1A" class="form-control">
+                        <input id="testID" type="text" placeholder="z.B. : 1A" class="form-control">
                     </div>
                     <div class="col-12">
                         <button type="button" class="btn btn-info float-end" data-bs-toggle="collapse" data-bs-target="#collapseTestID" aria-controls="collapseTestID" onclick="openNext('headingSUS')">Nächste</button>
@@ -35,76 +35,76 @@
           </h2>
           <div id="collapseSUS" class="accordion-collapse collapse" aria-labelledby="headingSUS" data-bs-parent="#accordionQuestionnaire">
             <div class="accordion-body">
-                <div class="form row">
+                <div class="form row" id="SUSForm">
                     <div class="mb-3" id="SUS_01"><div>1. Ich kann mir sehr gut vorstellen, das System regelmäßig zu nutzen</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_01_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_01_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_01_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_01_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_01_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_02"><div>2. Ich empfinde das System als unnötig komplex.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_02_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_02_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_02_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_02_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_02_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_03"><div>3. Ich empfinde das System als einfach zu nutzen.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_03_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_03_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_03_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_03_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_03_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_04"><div>4. Ich denke, dass ich technischen Support brauchen würde, um das System zu nutzen.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_04_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_04_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_04_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_04_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_04_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_05"><div>5. Ich finde, dass die verschiedenen Funktionen des Systems gut integriert sind.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_05_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_05_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_05_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_05_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_05_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_06"><div>6. Ich finde, dass es im System zu viele Inkonsistenzen gibt.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_06_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_06_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_06_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_06_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_06_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_07"><div>7. Ich kann mir vorstellen, dass die meisten Leute das System schnell zu beherrschen lernen.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_07_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_07_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_07_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_07_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_07_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_08"><div>8. Ich empfinde die Bedienung als sehr umständlich.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_08_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_08_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_08_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_08_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_08_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_09"><div>9. Ich habe mich bei der Nutzung des Systems sehr sicher gefühlt.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_09_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_09_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_09_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_09_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_09_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="mb-3" id="SUS_10"><div>10. Ich musste eine Menge Dinge lernen, bevor ich mit dem System arbeiten konnte.</div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_10_Options" value="1"><label class="form-check-label" for="inlineRadio1">1</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_10_Options" value="2"><label class="form-check-label" for="inlineRadio2">2</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_10_Options" value="3"><label class="form-check-label" for="inlineRadio3">3</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_10_Options" value="4"><label class="form-check-label" for="inlineRadio4">4</label></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="SUS_10_Options" value="5"><label class="form-check-label" for="inlineRadio5">5</label></div>
                     </div>
                     <div class="col-12">
                         <button type="button" class="btn btn-info float-end" data-bs-toggle="collapse" data-bs-target="#collapseSUS" aria-controls="collapseSUS" onclick="openNext('headingUEQ')">Nächste</button>
@@ -121,93 +121,93 @@
           </h2>
           <div id="collapseUEQ" class="accordion-collapse collapse" aria-labelledby="headingUEQ" data-bs-parent="#accordionQuestionnaire">
             <div class="accordion-body">
-                <div class="form row">
+                <div class="form row" id="UEQForm">
                     <div class="mb-3" id="UEQ_S_01">
                         <label class="me-4" style="width: 100px;">behindernd</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_01_Options" value="7"></div>
                         <label>unterstützend</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_02">
                         <label class="me-4" style="width: 100px;">kompliziert</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_02_Options" value="7"></div>
                         <label>einfach</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_03">
                         <label class="me-4" style="width: 100px;">ineffizient</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_03_Options" value="7"></div>
                         <label>effizient</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_04">
                         <label class="me-4" style="width: 100px;">verwirrend</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_04_Options" value="7"></div>
                         <label>übersichtlich</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_05">
                         <label class="me-4" style="width: 100px;">langweilig</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_05_Options" value="7"></div>
                         <label>spannend</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_06">
                         <label class="me-4" style="width: 100px;">uninteressant</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_06_Options" value="7"></div>
                         <label>interessant</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_07">
                         <label class="me-4" style="width: 100px;">konventionell</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_07_Options" value="7"></div>
                         <label>originell</label>
                     </div>
                     <div class="mb-3" id="UEQ_S_08">
                         <label class="me-4" style="width: 100px;">herkömmlich</label>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio6" value="6"></div>
-                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio7" value="7"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="1"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="2"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="3"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="4"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="5"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="6"></div>
+                        <div class="form-check form-check-inline"><input class="form-check-input" type="radio" name="UEQ_S_08_Options" value="7"></div>
                         <label>neuartig</label>
                     </div>
                     <div class="col-12">
@@ -225,29 +225,29 @@
             </h2>
             <div id="collapseNASA_TLX" class="accordion-collapse collapse" aria-labelledby="headingNASA_TLX" data-bs-parent="#accordionQuestionnaire">
               <div class="accordion-body">
-                <div class="form row">
+                <div class="form row" id="NASA_TLXForm">
 
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_01">
                         <label for="tlx_01" class="form-label">Mentaler Bedarf (Niedrig->Hoch)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_01">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_02">
                         <label for="tlx_02" class="form-label">Physischer Bedarf (Niedrig->Hoch)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_02">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_03">
                         <label for="tlx_03" class="form-label">Zeitlicher Bedarf (Niedrig->Hoch)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_03">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_04">
                         <label for="tlx_04" class="form-label">Performance (Schlecht->Gut)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_04">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_05">
                         <label for="tlx_05" class="form-label">Anstrengung (Niedrig->Hoch)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_05">
                     </div>
-                    <div class="input-group mb-3">
+                    <div class="input-group mb-3" id="nasa_tlx_06">
                         <label for="tlx_06" class="form-label">Frustration (Niedrig->Hoch)</label>
                         <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_06">
                     </div>
@@ -262,4 +262,6 @@
       </div>
 
 </body>
+
+<script type="text/javascript" src="./custom/custom.js"></script>
 </html>
