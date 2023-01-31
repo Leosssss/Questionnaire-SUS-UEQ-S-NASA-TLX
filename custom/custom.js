@@ -13,20 +13,15 @@ $(document).ready(function() {
 
         let data = [];
 
-
-        //let IDdata = [];
         let ID = document.getElementById("testID").value;
         if(!!ID){
             data['experimentID'] = ID;
-            //data.push(IDdata);
         }else{
             alert("Bitte Aufgabe ID hinzufügen!");
-            //return false;
         }
 
 
         let SUSQuestions = document.getElementById("SUSForm").getElementsByClassName("mb-3");
-        //let SUSData = [];
         for(let i=0; i<SUSQuestions.length; i++){
            let SUSID = SUSQuestions[i].id;
            let checkedItem = SUSQuestions[i].querySelector('.form-check-input:checked');
@@ -38,11 +33,9 @@ $(document).ready(function() {
             return false;
            }       
         }
-        //data.push(SUSData);
         
 
         let UEQSQuestions = document.getElementById("UEQForm").getElementsByClassName("mb-3");
-        //let UEQData = [];
         for(let j=0; j<UEQSQuestions.length; j++){
             let UEQID = UEQSQuestions[j].id;
             let checkedItem = UEQSQuestions[j].querySelector('.form-check-input:checked');
@@ -54,21 +47,17 @@ $(document).ready(function() {
                 return false;
             }    
         }
-        //data.push(UEQData);
 
 
         let NASA_TLXQuestions = document.getElementById("NASA_TLXForm").getElementsByClassName("mb-3");
-        //let NASA_TLXData = [];
         for(let l=0; l<NASA_TLXQuestions.length; l++){
             let NASA_TLXID = NASA_TLXQuestions[l].id;
             let rangeValue = NASA_TLXQuestions[l].querySelector('input').value;
             data[NASA_TLXID] = rangeValue;
         }
-        //data.push(NASA_TLXData);
                 
         const csvdata = csvmaker(data);
         download(csvdata, ID);
-    
     })
 });
 
