@@ -225,37 +225,92 @@
             </h2>
             <div id="collapseNASA_TLX" class="accordion-collapse collapse" aria-labelledby="headingNASA_TLX" data-bs-parent="#accordionQuestionnaire">
               <div class="accordion-body">
-                <div class="form row" id="NASA_TLXForm">
+                <div class="row">
+                    <strong>Beanspruchungshöhe</strong>
+                </div>
+                <div class="row mb-5 ms-1">
+                    Geben Sie jetzt für jede der unten stehenden Dimensionen an, wie hoch die Beanspruchung 
+                    war. Markieren Sie dazu bitte auf den folgenden Skalen, in welchem Maße Sie sich in den 
+                    sechs genannten Dimensionen von der Aufgabe beansprucht oder gefordert gesehen haben:
+                </div>
+                <div class="form row" id="NASA_TLXForm">        
 
-                    <div class="input-group mb-3" id="nasa_tlx_01">
-                        <label for="tlx_01" class="form-label">Mentaler Bedarf (Niedrig->Hoch)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_01">
+                    <div class="row">
+                        <div><strong>Geistige Anforderungen</strong></div>
+                        <div>Wie viel geistige Anstrengung war bei der 
+                            Informationsaufnahme und -verarbeitung erforderlich (z.B. Denken, Entscheiden, Rechnen, Erinnern, Hinsehen, Suchen...)? War die 
+                            Aufgabe leicht oder anspruchsvoll, einfach 
+                            oder komplex, erforderte sie hohe Genauigkeit oder war sie fehlertolerant?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gering</small><small>hoch</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_01">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_01">
+                        </div>
                     </div>
-                    <div class="input-group mb-3" id="nasa_tlx_02">
-                        <label for="tlx_02" class="form-label">Physischer Bedarf (Niedrig->Hoch)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_02">
+
+                    <div class="row">
+                        <div><strong>Körperliche Anforderungen</strong></div>
+                        <div>Wie viel körperliche Aktivität war erforderlich 
+                            (z.B. Ziehen, Drücken, Drehen, Steuern, Aktivieren,…)? War die Aufgabe leicht oder 
+                            schwer, einfach oder anstrengend, erholsam 
+                            oder mühselig?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gering</small><small>hoch</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_02">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_02">
+                        </div>
                     </div>
-                    <div class="input-group mb-3" id="nasa_tlx_03">
-                        <label for="tlx_03" class="form-label">Zeitlicher Bedarf (Niedrig->Hoch)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_03">
+
+                    <div class="row">
+                        <div><strong>Zeitliche Anforderungen</strong></div>
+                        <div>Wie viel Zeitdruck empfanden Sie hinsichtlich 
+                            der Häufigkeit oder dem Takt, mit dem Aufgaben oder Aufgabenelemente auftraten? War 
+                            die Abfolge langsam und geruhsam oder 
+                            schnell und hektisch?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gering</small><small>hoch</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_03">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_03">
+                        </div>
                     </div>
-                    <div class="input-group mb-3" id="nasa_tlx_04">
-                        <label for="tlx_04" class="form-label">Performance (Schlecht->Gut)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_04">
+
+                    <div class="row">
+                        <div><strong>Leistung</strong></div>
+                        <div>Wie erfolgreich haben Sie Ihrer Meinung nach 
+                            die vom Versuchsleiter (oder Ihnen selbst) 
+                            gesetzten Ziele erreicht? Wie zufrieden waren 
+                            Sie mit Ihrer Leistung bei der Verfolgung dieser Ziele?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gut</small><small>schlecht</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_04">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_04">
+                        </div>
                     </div>
-                    <div class="input-group mb-3" id="nasa_tlx_05">
-                        <label for="tlx_05" class="form-label">Anstrengung (Niedrig->Hoch)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_05">
+
+                    <div class="row">
+                        <div><strong>Anstrengung</strong></div>
+                        <div>Wie hart mussten sie arbeiten, um Ihren Grad 
+                            an Aufgabenerfüllung zu erreichen?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gering</small><small>hoch</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_05">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_05">
+                        </div>
                     </div>
-                    <div class="input-group mb-3" id="nasa_tlx_06">
-                        <label for="tlx_06" class="form-label">Frustration (Niedrig->Hoch)</label>
-                        <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_06">
+
+                    <div class="row">
+                        <div><strong>Frustration</strong></div>
+                        <div>Wie unsicher, entmutigt, irritiert, gestresst und 
+                            verärgert (versus sicher, bestätigt, zufrieden, 
+                            entspannt und zufrieden mit sich selbst) fühlten Sie sich während der Aufgabe?</div>
+                        <div class="col-12 d-flex justify-content-between" style="color: rgb(0, 89, 255);"><small>gering</small><small>hoch</small></div>
+                        <div class="input-group mb-4" id="nasa_tlx_06">        
+                            <input type="range" class="form-range" min="1" max="20" step="1" id="tlx_06">
+                        </div>
                     </div>
-                
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-info float-end" data-bs-toggle="collapse" data-bs-target="#collapseNASA_TLX" aria-controls="collapseNASA_TLX">Fertig</button>
+
+                    <div class="row">
+                        <div class="col-12">
+                            <button type="submit" class="btn btn-info float-end" data-bs-toggle="collapse" data-bs-target="#collapseNASA_TLX" aria-controls="collapseNASA_TLX">Fertig</button>
+                        </div>
                     </div>
-                </div> 
+
+                </div>                    
               </div>
             </div>
           </div>

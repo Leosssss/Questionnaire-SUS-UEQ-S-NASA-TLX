@@ -18,6 +18,7 @@ $(document).ready(function() {
             data['experimentID'] = ID;
         }else{
             alert("Bitte Aufgabe ID hinzufügen!");
+            return false;
         }
 
 
@@ -49,7 +50,7 @@ $(document).ready(function() {
         }
 
 
-        let NASA_TLXQuestions = document.getElementById("NASA_TLXForm").getElementsByClassName("mb-3");
+        let NASA_TLXQuestions = document.getElementById("NASA_TLXForm").getElementsByClassName("input-group");
         for(let l=0; l<NASA_TLXQuestions.length; l++){
             let NASA_TLXID = NASA_TLXQuestions[l].id;
             let rangeValue = NASA_TLXQuestions[l].querySelector('input').value;
